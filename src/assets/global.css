@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    width: 100%;
+    padding: 0.5em;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(44, 86, 122);
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0em;
+    margin: 0em;
+    overflow-wrap: break-word;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+    background-color: rgba(255, 255, 255);
+    margin-top: 0;
+
+    grid-template: auto;
+}
+
+.topbar {
+    width: 100%;
+    height: 1.25em;
+    background-color: rgb(44, 86, 122);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.83em;
+}
+
+h6 {
+    font-size: 0.67em;
+}
+
+.section-title {
+    color: rgb(44, 86, 122);
+    border-bottom: 0.1em solid rgb(44, 86, 122);
+}
+
+.name {
+    border-bottom: 0.2em solid rgb(44, 86, 122);
+}
+
+.image {
+    border-radius: 100%;
+}
+
+.icon {
+    width: 1.75em;
+    height: 1.3em;
+}
+
+.local {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+img.footerimg {
+    width: 10em;
+    height: 6em;
+    margin: 4em;
+}
+
+@media only screen and (max-width: 37.5em) {
+
+    [class*="col-xs-"] {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .col-xs-1 {
+        width: 8.33%;
+    }
+
+    .col-xs-2 {
+        width: 16.66%;
+    }
+
+    .col-xs-3 {
+        width: 25%;
+    }
+
+    .col-xs-4 {
+        width: 33.33%;
+    }
+
+    .col-xs-5 {
+        width: 41.66%;
+    }
+
+    .col-xs-6 {
+        width: 50%;
+    }
+
+    .col-xs-7 {
+        width: 58.33%;
+    }
+
+    .col-xs-8 {
+        width: 66.66%;
+    }
+
+    .col-xs-9 {
+        width: 75%;
+    }
+
+    .col-xs-10 {
+        width: 83.33%;
+    }
+
+    .col-xs-11 {
+        width: 91.66%;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
+        background-color: rgba(255, 255, 255);
+        margin-top: 0;
+        grid-template: 40% auto;
+    }
+
+    .topbar {
+        width: 100%;
+        height: 1.25em;
+        background-color: rgb(44, 86, 122);
+    }
+
+    .image {
+        justify-self: center;
+    }
+
+    .appimage {
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (min-width: 37.5em) {
+    [class*="col-sm-"] {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .col-sm-1 {
+        width: 8.33%;
+    }
+
+    .col-sm-2 {
+        width: 16.66%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-sm-4 {
+        width: 33.33%;
+    }
+
+    .col-sm-5 {
+        width: 41.66%;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-7 {
+        width: 58.33%;
+    }
+
+    .col-sm-8 {
+        width: 66.66%;
+    }
+
+    .col-sm-9 {
+        width: 75%;
+    }
+
+    .col-sm-10 {
+        width: 83.33%;
+    }
+
+    .col-sm-11 {
+        width: 91.66%;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
+        background-color: rgba(255, 255, 255);
+        margin-top: 0;
+
+    }
+
+    .topbar {
+        width: 100%;
+        height: 1.25em;
+        background-color: rgb(44, 86, 122);
+    }
+
+    .image {
+        justify-content: center;
+    }
+
+    .appimage {
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    body {
+        background-color: #ffffff;
+        background-image: url("./bg.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    [class*="col-md-"] {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .col-md-1 {
+        width: 8.33%;
+    }
+
+    .col-md-2 {
+        width: 16.66%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.33%;
+    }
+
+    .col-md-5 {
+        width: 41.66%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-7 {
+        width: 58.33%;
+    }
+
+    .col-md-8 {
+        width: 66.66%;
+    }
+
+    .col-md-9 {
+        width: 75%;
+    }
+
+    .col-md-10 {
+        width: 83.33%;
+    }
+
+    .col-md-11 {
+        width: 91.66%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
+        background-color: rgba(255, 255, 255);
+        margin-left: 3.375em;
+        margin-right: 3.375em;
+        margin-top: 0;
+
+    }
+
+    .topbar {
+        width: 100%;
+        height: 1.875em;
+        background-color: rgb(44, 86, 122);
+    }
+
+    .name {
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+    .summary {
+        float: right;
+        text-align: justify;
+    }
+
+    .location {
+        float: left;
+        text-align: justify;
+        justify-items: space-around;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    body {
+        background-color: #ffffff;
+        background-image: url("./bg.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    [class*="col-lg-"] {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .col-lg-1 {
+        width: 8.33%;
+    }
+
+    .col-lg-2 {
+        width: 16.66%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.33%;
+    }
+
+    .col-lg-8 {
+        width: 66.66%;
+    }
+
+    .col-lg-9 {
+        width: 75%;
+    }
+
+    .col-lg-10 {
+        width: 83.33%;
+    }
+
+    .col-lg-11 {
+        width: 91.66%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
+        background-color: rgba(255, 255, 255);
+        margin-left: 9.375em;
+        margin-right: 9.375em;
+        margin-top: 0;
+
+    }
+
+    .topbar {
+        width: 100%;
+        height: 1.875em;
+        background-color: rgb(44, 86, 122);
+    }
+
+    .name {
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+    .summary {
+        float: right;
+        text-align: justify;
+    }
+
+    .location {
+        float: left;
+        text-align: justify;
+        justify-items: space-around;
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    body {
+        background-color: #ffffff;
+        background-image: url("./bg.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    [class*="col-xl-"] {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .col-xl-1 {
+        width: 8.33%;
+    }
+
+    .col-xl-2 {
+        width: 16.66%;
+    }
+
+    .col-xl-3 {
+        width: 25%;
+    }
+
+    .col-xl-4 {
+        width: 33.33%;
+    }
+
+    .col-xl-5 {
+        width: 41.66%;
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .col-xl-7 {
+        width: 58.33%;
+    }
+
+    .col-xl-8 {
+        width: 66.66%;
+    }
+
+    .col-xl-9 {
+        width: 75%;
+    }
+
+    .col-xl-10 {
+        width: 83.33%;
+    }
+
+    .col-xl-11 {
+        width: 91.66%;
+    }
+
+    .col-xl-12 {
+        width: 100%;
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
+        background-color: rgba(255, 255, 255);
+        margin-left: 9.375em;
+        margin-right: 9.375em;
+        margin-top: 0;
+
+    }
+
+    .topbar {
+        width: 100%;
+        height: 1.875em;
+        background-color: rgb(44, 86, 122);
+    }
+
+    .name {
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+    .summary {
+        float: right;
+        text-align: justify;
+    }
+
+    .location {
+        float: left;
+        text-align: justify;
+        justify-items: space-around;
+    }
+}
